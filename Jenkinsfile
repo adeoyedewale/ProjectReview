@@ -17,6 +17,13 @@ pipeline {
                 sh 'npm run build'
             }
         }
+	    
+	 stage('Test') {
+            steps {
+                sh 'npm run test'
+            }
+        }
+	    
         stage('Dockerize') {
             steps {
                 sh "docker build -t eruobodo/frontend_app:${BUILD_NUMBER} ."
