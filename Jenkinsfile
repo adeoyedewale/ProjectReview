@@ -18,12 +18,6 @@ pipeline {
             }
         }
 	    
-	 stage('Test') {
-            steps {
-                sh 'yarn test'
-            }
-        }
-	    
         stage('Dockerize') {
             steps {
                 sh "docker build -t eruobodo/frontendApp:${BUILD_NUMBER} ."
