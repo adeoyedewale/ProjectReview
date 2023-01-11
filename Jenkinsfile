@@ -26,7 +26,7 @@ pipeline {
 	    
         stage('Dockerize') {
             steps {
-                sh "docker build -t eruobodo/frontend_app:${BUILD_NUMBER} ."
+                sh "docker build -t eruobodo/frontendApp:${BUILD_NUMBER} ."
             }
         }
         //stage('Publish') {
@@ -45,7 +45,7 @@ pipeline {
         stage('Push') {
 
               steps {
-                 sh 'docker push eruobodo/frontend_app:${BUILD_NUMBER}'
+                 sh 'docker push eruobodo/frontendApp:${BUILD_NUMBER}'
               }
         }
 		}
