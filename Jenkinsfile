@@ -20,7 +20,7 @@ pipeline {
 	    
 	 stage('Test') {
             steps {
-                sh 'npm run react-scipts test'
+                sh 'npm run test'
             }
         }
 	    
