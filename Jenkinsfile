@@ -20,7 +20,7 @@ pipeline {
 	    
 	 stage('Test') {
             steps {
-                sh 'react-scripts test'
+                sh 'npm run test:jest'
             }
         }
 	    
