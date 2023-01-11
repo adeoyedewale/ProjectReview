@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Dockerize') {
             steps {
-                sh "docker build -t eruobodo/your-nodejs-app:${BUILD_NUMBER} ."
+                sh "docker build -t eruobodo/frontend_app:${BUILD_NUMBER} ."
             }
         }
         //stage('Publish') {
